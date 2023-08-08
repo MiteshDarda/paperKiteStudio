@@ -8,14 +8,14 @@ function Project() {
     const navigate = useNavigate();
     const category = params.category;
     const id = params.id
-    const data = projects[category].data[id];
+    const data = projects[Number(category)].data[Number(id)];
 
     const isPriviousAvailable = () => {
         return (id === '0' && category === '0' ? false : true);
     }
 
     const isNextAvailable = () => {
-        return (Number(category) + 1 === projects.length && Number(id) + 1 === projects[category].data.length ? false : true)
+        return (Number(category) + 1 === projects.length && Number(id) + 1 === projects[Number(category)].data.length ? false : true)
     }
 
     const nextPage = () => {
