@@ -4,13 +4,6 @@ import Nav from './Navbar/Navbar'
 import { useEffect } from 'react'
 
 function App() {
-
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    navigate('/Home');
-  })
-
   return (
     <>
       <Nav />
