@@ -1,7 +1,6 @@
-import { Outlet, useNavigate } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 import './App.css'
 import Nav from './Navbar/Navbar'
-import { useEffect } from 'react'
 
 function App() {
   return (
