@@ -26,6 +26,11 @@ function Project() {
         else {
             navigate(`/Projects/${Number(category)}/${newId}`);
         }
+        window.scrollTo({
+            top: 100,
+            left: 100,
+            behavior: "smooth",
+        });
     }
     const previousPage = () => {
         let data = [];
@@ -39,6 +44,11 @@ function Project() {
                 `/Projects/${Number(category) - 1}/${length - 1}` :
                 `/Projects/${category}/${Number(id) - 1}`
         );
+        window.scrollTo({
+            top: 100,
+            left: 100,
+            behavior: "smooth",
+        });
     }
     return (
         <Card className=" p-12 mb-12 w-11/12 min-h-[80vh] flex flex-col justify-center">
