@@ -1,0 +1,10 @@
+.carousel-button{
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    padding: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.carousel-button:hover{
+    background-color: rgba(0, 0, 0, 1);
+}

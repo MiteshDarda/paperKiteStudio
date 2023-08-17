@@ -7,7 +7,7 @@ function App() {
     <>
       <Nav />
       <br />
-      <div className=' flex justify-center pt-10'>
+      <div className=' flex justify-center'>
         <Outlet></Outlet>
       </div>
     </>

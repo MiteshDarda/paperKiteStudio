@@ -16,7 +16,7 @@ function Nav() {
     ];
 
     return <>
-        <Navbar onMenuOpenChange={() => setIsMenuOpen} className=" text-2xl">
+        <Navbar onMenuOpenChange={() => setIsMenuOpen} className=" text-2xl bg-[#fefafa] text-black">
             <NavbarContent>
                 <NavbarMenuToggle
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -28,8 +28,8 @@ function Nav() {
                 </NavbarBrand>
             </NavbarContent>
 
-            <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                <NavbarItem className=" text-2xl">
+            <NavbarContent className="hidden sm:flex gap-4 " justify="center">
+                <NavbarItem className=" text-2xl ">
                     <Link to={'/Home'}>
                         Home
                     </Link>

@@ -14,7 +14,7 @@ function Projects() {
                         {projects.map((project, categoryIndex) => project.data.map((data, index) => {
                             return (
                                 <Link to={`/Projects/${categoryIndex}/${index}`}>
-                                    <Card className="p-10 m-3">
+                                    <Card className="p-10">
                                         <Image width={360} src={data.images[0]} isZoomed />
                                         <h1 className=" text-3xl m-6">{data.title} {index}</h1>
                                         <h2>{data.details} {project.category} {categoryIndex}</h2>
