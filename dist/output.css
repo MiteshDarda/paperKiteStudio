@@ -5991,9 +5991,19 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:w-4\/12 {
+    width: 33.333333%;
+  }
+
   .md\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:w-3\/12 {
+    width: 25%;
   }
 }
 

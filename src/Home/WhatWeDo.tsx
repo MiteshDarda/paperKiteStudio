@@ -1,6 +1,6 @@
 const whatWeDo = () => {
     return (<>
-        <div className="p-unit-12 min-h-screen flex flex-col justify-center bg-[rgba(0,0,0,0.4)]">
+        <div className="p-unit-12 min-h-screen flex flex-col justify-center bg-[rgba(0,0,0,0.4)]" id="about-us">
             <h1 className="text-3xl mb-12">
                 What We Do ?
             </h1>

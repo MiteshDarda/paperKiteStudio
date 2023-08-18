@@ -35,9 +35,9 @@ function Nav() {
                     </Link>
                 </NavbarItem>
                 <NavbarItem className=" text-2xl">
-                    <Link to={'/AboutUs'}>
+                    <a href="Home#about-us">
                         About us
-                    </Link>
+                    </a>
                 </NavbarItem>
                 <NavbarItem className=" text-2xl">
                     <Link to={'/Projects'}>
