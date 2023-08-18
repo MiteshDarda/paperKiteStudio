@@ -1,10 +1,10 @@
 import { InstagramFilled, MailFilled, PhoneFilled } from "@ant-design/icons"
-import { Card, Link } from "@nextui-org/react"
+import { Link } from "@nextui-org/react"
 
 function ContactUs() {
     return (
         <>
-            <Card shadow="sm" className="p-unit-12 mb-12 w-11/12 min-h-[80vh] flex flex-col justify-center">
+            <div className="bg-black p-unit-12 w-screen h-screen flex flex-col justify-center">
                 <div>
                     <Link isExternal href="https://www.instagram.com/studiopaperkites/?utm_medium=copy_link" color="foreground">
                         <InstagramFilled className=" md:text-3xl" />
@@ -35,7 +35,7 @@ function ContactUs() {
                         </span>
                     </Link>
                 </div>
-            </Card >
+            </div >
         </>
     )
 
