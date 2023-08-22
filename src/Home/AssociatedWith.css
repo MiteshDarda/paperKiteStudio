@@ -15,6 +15,7 @@
     text-align: left;
     white-space: nowrap;
     position: relative;
+    display: inline-block;
 }
 
 .logos-slide{
@@ -34,16 +35,15 @@
 
 .logos::after{
     right: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5));
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(265,265,265,0.5));
 }
 
 .logos::before{
     left: 0;
-    background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.5));
+    background: linear-gradient(to left, rgba(0,0,0,0), rgba(265, 265, 265, 0.5));
 }
 
 .logos-slide img{
     display: inline-block;
-    height: 100px;
     margin: 0 40px;
 }

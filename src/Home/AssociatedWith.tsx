@@ -7,26 +7,36 @@ import { motion } from "framer-motion"
 import "./AssociatedWith.css"
 
 const images = <div className="logos-slide">
-    <img src={one} />
-    <img src={two} />
-    <img src={three} />
-    <img src={four} />
-    <img src={five} />
+    <img className="h-[60px]" src={one} />
+    <img className="h-[60px]" src={two} />
+    <img className="h-[60px]" src={three} />
+    <img className="h-[60px]" src={four} />
+    <img className="h-[60px]" src={five} />
 </div>
 
 const AssociatedWith = () => {
 
     return (
-        <div className="min-h-[50vh] flex flex-col justify-center bg-[rgba(0,0,0,0.4)]">
+        <motion.div
+            className="min-h-[50vh] flex flex-col justify-around bg-[rgba(0,0,0,0.8)]"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+        // viewport={{ once: true }}
+        >
             <motion.h1 className=" text-5xl mt-10">Associated With</motion.h1>
-            <div className="logos">
+            <motion.div
+                className="logos"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+            >
                 {images}
                 {images}
                 {images}
                 {images}
-                {images}
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     )
 
 }

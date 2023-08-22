@@ -1,6 +1,14 @@
+import { motion } from "framer-motion"
 const whatWeDo = () => {
     return (<>
-        <div className="p-unit-12 min-h-screen flex flex-col justify-center bg-[rgba(0,0,0,0.4)]" id="about-us">
+        <motion.div
+            className="p-unit-12 min-h-screen flex flex-col justify-center bg-[rgba(0,0,0,0.8)]"
+            id="about-us"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+        // viewport={{ once: true }}
+        >
             <h1 className="text-3xl mb-12">
                 What We Do ?
             </h1>
@@ -24,7 +32,7 @@ const whatWeDo = () => {
                 Our past experiences have led us deep rooted in understandinĀ Client’s
                 requirements in detail and provide desiĀn as solution with optimum use oÿ space.
             </div>
-        </div >
+        </motion.div >
     </>)
 }
 

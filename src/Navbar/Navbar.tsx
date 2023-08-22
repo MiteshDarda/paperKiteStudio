@@ -1,43 +1,48 @@
 import { useState } from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
-
-import * as UI from "@nextui-org/react"
+import { motion } from "framer-motion"
 
 import { Link } from "react-router-dom";
 
 function Nav() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+    const mobileLinkOpenHandler = () => {
+        setIsMenuOpen(false)
+    }
+
     const menuItems = [
-        "Home",
-        "About us",
-        "Projects",
-        "Contact us",
+        ["Home", "/Home#home"],
+        ["About us", "Home#about-us"],
+        ["Projects", "/Projects"],
+        ["Contact us", "Home#contact-us"],
     ];
 
     return <>
-        <Navbar onMenuOpenChange={() => setIsMenuOpen} className=" text-2xl bg-[#fefafa] text-black">
+        <Navbar onMenuOpenChange={() => setIsMenuOpen} isMenuOpen={isMenuOpen} className=" text-2xl bg-[#B9BC8D] text-[#071124]">
             <NavbarContent>
                 <NavbarMenuToggle
+                    onClick={() => { setIsMenuOpen(!isMenuOpen) }}
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                     className="sm:hidden"
-                    onChange={() => console.log("yes")}
                 />
                 <NavbarBrand className=" text-4xl">
-                    <p className="font-bold text-inherit">PKS</p>
+                    <p className="font-bold text-inherit">
+                        <motion.img className="h-16" src={"../../public/logo.png"} />
+                    </p>
                 </NavbarBrand>
             </NavbarContent>
 
-            <NavbarContent className="hidden sm:flex gap-4 " justify="center">
+            <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem className=" text-2xl ">
-                    <Link to={'/Home'}>
+                    <Link to={'/Home#home'}>
                         Home
                     </Link>
                 </NavbarItem>
                 <NavbarItem className=" text-2xl">
-                    <a href="Home#about-us">
+                    <Link to={"Home#about-us"}>
                         About us
-                    </a>
+                    </Link>
                 </NavbarItem>
                 <NavbarItem className=" text-2xl">
                     <Link to={'/Projects'}>
@@ -45,20 +50,17 @@ function Nav() {
                     </Link>
                 </NavbarItem>
                 <NavbarItem className=" text-2xl">
-                    <Link to={'/ContactUs'}>
+                    <Link to={"Home#contact-us"}>
                         Contact us
                     </Link>
                 </NavbarItem>
             </NavbarContent>
-            <NavbarMenu className="py-10">
-                {menuItems.map((item, index) => (
-                    <NavbarMenuItem key={`${item}-${index}`}>
-                        <UI.Link
-                            color="foreground"
-                            href={item.replace(/\s/g, '')}
-                        >
+            <NavbarMenu className="py-10 bg-[#878A67]">
+                {menuItems.map(([item, to], index) => (
+                    <NavbarMenuItem key={`${item}-${index}`} >
+                        <Link to={to} onClick={mobileLinkOpenHandler}>
                             {item}
-                        </UI.Link>
+                        </Link>
                     </NavbarMenuItem>
                 ))}
             </NavbarMenu>

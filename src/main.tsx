@@ -5,8 +5,6 @@ import './index.css'
 import { NextUIProvider } from '@nextui-org/system'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Projects from './Projects/Projects.tsx'
-import ContactUs from './ContactUs/ContactUs.tsx'
-import AboutUs from './AboutUs/AboutUs.tsx'
 import Home from './Home/Home.tsx'
 import Project from './Projects/Project.tsx'
 
@@ -15,8 +13,6 @@ const router = createBrowserRouter(
     {
       'path': '/', element: <App />, children: [
         { 'path': '/Projects', element: <Projects /> },
-        { 'path': '/ContactUs', element: <ContactUs /> },
-        { 'path': '/AboutUs', element: <AboutUs /> },
         { 'path': '/Home', element: <Home /> },
         { 'path': '/Projects/:category/:id', element: <Project /> },
         { 'path': '/', element: <Home /> },

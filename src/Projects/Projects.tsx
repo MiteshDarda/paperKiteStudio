@@ -14,7 +14,7 @@ function Projects() {
                     <div className="flex justify-around items-center flex-wrap">
                         {projects.map((project, categoryIndex) => project.data.map((data, index) => {
                             return (
-                                <Link to={`/Projects/${categoryIndex}/${index}`} className="lg:w-3/12 md:w-4/12">
+                                <Link key={categoryIndex * 100 + index} to={`/Projects/${categoryIndex}/${index}`} className="lg:w-3/12 md:w-4/12">
                                     <motion.div className="p-10 m-3 project-tile">
                                         <motion.img src={data.images[0]} />
                                         <motion.h1 className=" text-3xl m-6">{data.title} {index}</motion.h1>
@@ -29,10 +29,10 @@ function Projects() {
                 {/* For Individual Projects */}
                 {projects.map(
                     (project, categoryIndex) =>
-                        <Tab title={project.category} className=" flex justify-around items-center flex-wrap">
+                        <Tab title={project.category} className=" flex justify-around items-center flex-wrap" key={categoryIndex}>
                             {project.data.map((data, index) => {
                                 return (
-                                    <Link to={`/Projects/${categoryIndex}/${index}`} className="lg:w-3/12 md:w-4/12">
+                                    <Link to={`/Projects/${categoryIndex}/${index}`} className="lg:w-3/12 md:w-4/12" key={index}>
                                         <motion.div className="p-10 m-3 project-tile">
                                             < motion.img src={data.images[0]} />
                                             <motion.h1 className=" text-3xl m-6">{data.title} {index}</motion.h1>

@@ -1,10 +1,18 @@
 import { InstagramFilled, MailFilled, PhoneFilled } from "@ant-design/icons"
 import { Link } from "@nextui-org/react"
+import { motion } from "framer-motion"
 
 function ContactUs() {
     return (
         <>
-            <div className="bg-black p-unit-12 w-screen h-screen flex flex-col justify-center">
+            <motion.div
+                className="bg-black p-unit-12 w-screen h-screen flex flex-col justify-center"
+                id="contact-us"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.3 }}
+            // viewport={{ once: true }}
+            >
                 <div>
                     <Link isExternal href="https://www.instagram.com/studiopaperkites/?utm_medium=copy_link" color="foreground">
                         <InstagramFilled className=" md:text-3xl" />
@@ -35,7 +43,7 @@ function ContactUs() {
                         </span>
                     </Link>
                 </div>
-            </div >
+            </motion.div>
         </>
     )
 
