@@ -2424,6 +2424,14 @@ video {
   padding-top: 1.5rem;
 }
 
+.pl-12 {
+  padding-left: 3rem;
+}
+
+.pr-12 {
+  padding-right: 3rem;
+}
+
 .text-left {
   text-align: left;
 }

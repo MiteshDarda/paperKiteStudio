@@ -10,7 +10,7 @@ function ContactUs() {
                 id="contact-us"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
+                transition={{ delay: 0.1 }}
             // viewport={{ once: true }}
             >
                 <div>

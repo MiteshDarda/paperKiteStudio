@@ -1,6 +1,7 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import projects from "../projectData";
-import { Button, Card, Image } from "@nextui-org/react";
+import { motion } from "framer-motion"
+import { Button } from "@nextui-org/react";
 import { RollbackOutlined, StepBackwardOutlined, StepForwardOutlined } from "@ant-design/icons";
 
 function Project() {
@@ -51,7 +52,12 @@ function Project() {
         });
     }
     return (
-        <Card className=" p-12 mb-12 w-11/12 min-h-[80vh] flex flex-col justify-center">
+        <motion.div
+            className=" p-12 mb-12 w-11/12 min-h-[80vh] flex flex-col justify-center"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.1 }}
+        >
             <div className=" flex w-11/12">
                 <Link to={"/Projects"}>
                     <Button variant="bordered" color="secondary" endContent={<RollbackOutlined />}>
@@ -59,21 +65,34 @@ function Project() {
                     </Button>
                 </Link>
             </div>
-            <br></br>
-            <br></br>
-            <h1 className=" text-5xl">{data.title}</h1>
-            <br></br>
-            <p>{data.info}</p>
-            <br></br>
-            <h2 className=" text-2xl"><b>CLIENT : </b> {data.client}</h2>
-            <br></br>
-            <h2 className=" text-2xl"><b>PROJECTS DETAILS : </b>{data.details}</h2>
-            <br></br>
-            <h2 className=" text-2xl"><b>PHOTOGRAPH : </b>{data.photographer}</h2>
-            <br></br>
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.1 }}
+                className="flex flex-col items-end pr-12"
+            >
+                <br></br>
+                <br></br>
+                <h1 className=" text-5xl">{data.title}</h1>
+                <br></br>
+                <p>{data.info}</p>
+                <br></br>
+                <h2 className=" text-2xl"><b>CLIENT : </b> {data.client}</h2>
+                <br></br>
+                <h2 className=" text-2xl"><b>PROJECTS DETAILS : </b>{data.details}</h2>
+                <br></br>
+                <h2 className=" text-2xl"><b>PHOTOGRAPH : </b>{data.photographer}</h2>
+                <br></br>
+            </motion.div>
             <div className=" flex flex-wrap justify-center items-center">
                 {data.images.map((image: string) => {
-                    return <Image src={image} className=" m-12 w-11/12" />
+                    return <motion.img
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.1 }}
+                        src={image}
+                        className=" m-12 w-11/12"
+                    />
                 })}
             </div>
             <div className=" flex justify-between">
@@ -84,7 +103,7 @@ function Project() {
                     Next
                 </Button>
             </div>
-        </Card>
+        </motion.div>
     )
 }
 

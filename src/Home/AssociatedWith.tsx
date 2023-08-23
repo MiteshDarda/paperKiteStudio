@@ -21,7 +21,7 @@ const AssociatedWith = () => {
             className="min-h-[50vh] flex flex-col justify-around bg-[rgba(0,0,0,0.8)]"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.1 }}
         // viewport={{ once: true }}
         >
             <motion.h1 className=" text-5xl mt-10">Associated With</motion.h1>
