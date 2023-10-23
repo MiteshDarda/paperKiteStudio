@@ -1,10 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import { motion } from "framer-motion"
 
 import { Link } from "react-router-dom";
 
-function Nav() {
+function Nav({ show }: { show: boolean }) {
+
+    useEffect(
+        () => {
+            console.log(show)
+        }, [show]
+    )
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const mobileLinkOpenHandler = () => {
@@ -19,7 +26,7 @@ function Nav() {
     ];
 
     return <>
-        <Navbar onMenuOpenChange={() => setIsMenuOpen} isMenuOpen={isMenuOpen} className=" text-2xl bg-[#B9BC8D] text-[#071124]">
+        <Navbar onMenuOpenChange={() => setIsMenuOpen} isMenuOpen={isMenuOpen} className={` text-2xl bg-[white] text-[#071124] h-full w-screen transition-all duration-1000 ${show ? 'hidden' : ''}`}>
             <NavbarContent>
                 <NavbarMenuToggle
                     onClick={() => { setIsMenuOpen(!isMenuOpen) }}

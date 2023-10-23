@@ -9,6 +9,7 @@ import UpcommingProjects from "./UpcommingProjects";
 import WhatWeDo from "./WhatWeDo";
 import WhoWeAre from "./WhoWeAre";
 import { useLocation } from "react-router-dom";
+import Start from "./Start";
 
 function Home() {
     const location = useLocation();
@@ -25,7 +26,8 @@ function Home() {
         // console.log(x, location.hash, location.hash.substring(1))
     }, [location])
 
-    return (<div className="home" id="home">
+    return (<div className="home p-0 m-0" id="home">
+        <Start />
         <Slider childs={imageChildrens} totalItems={3} />
         <WhatWeDo />
         <WhoWeAre />
