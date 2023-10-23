@@ -1,12 +1,13 @@
+// import "../../public/LOGO.png"
 const Start = () => {
 
     return (
         <div className=" h-screen flex justify-center items-center">
             <div className="flex flex-col">
-                <img src="./LOGO.png"></img>
+                <img src="../../public/LOGO.png"></img>
                 <br />
                 <br />
-                <img src="./logoText.png"></img>
+                <img src="../../public/logoText.png"></img>
             </div>
         </div >
     )
