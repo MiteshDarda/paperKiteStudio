@@ -35,7 +35,7 @@ function Nav({ show }: { show: boolean }) {
                 />
                 <NavbarBrand className=" text-4xl">
                     <p className="font-bold text-inherit">
-                        <motion.img className="h-16" src={"./logo.png"} />
+                        <motion.img className="h-16" src={"./LOGO.png"} />
                     </p>
                 </NavbarBrand>
             </NavbarContent>
