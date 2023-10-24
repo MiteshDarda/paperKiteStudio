@@ -1,17 +1,5 @@
 {
   "rewrites":  [
-    {
-      "source": "/:path*",
-      "destination": "/",
-      "has": [
-        {
-          "type": "path",
-          "value": "/public/(.*)"
-        },
-        {
-          "type": "not"
-        }
-      ]
-    }
+    {"source": "/(.*)", "destination": "/"}
   ]
 }
