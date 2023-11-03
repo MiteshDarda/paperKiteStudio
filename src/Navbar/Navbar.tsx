@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import { motion } from "framer-motion"
-import logo from "/logo.png"
+import logo from "../images/LOGO.png"
 
 import { Link } from "react-router-dom";
 
