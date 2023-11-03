@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/react";
 import { motion } from "framer-motion"
+import logo from "/logo.png"
 
 import { Link } from "react-router-dom";
 
@@ -35,7 +36,7 @@ function Nav({ show }: { show: boolean }) {
                 />
                 <NavbarBrand className=" text-4xl">
                     <p className="font-bold text-inherit">
-                        <motion.img className="h-12" src={"./LOGO.png"} />
+                        <motion.img className="h-12" src={logo} />
                     </p>
                 </NavbarBrand>
             </NavbarContent>
