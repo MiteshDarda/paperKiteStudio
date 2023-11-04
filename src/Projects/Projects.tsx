@@ -1,5 +1,5 @@
 import { Tab, Tabs } from "@nextui-org/react";
-import projects from "../projectData";
+import projects from "../data/projectData";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"
 import "./Projects.css"

@@ -1,5 +1,5 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
-import projects from "../projectData";
+import projects from "../data/projectData";
 import { motion } from "framer-motion"
 import { Button } from "@nextui-org/react";
 import { RollbackOutlined, StepBackwardOutlined, StepForwardOutlined } from "@ant-design/icons";
