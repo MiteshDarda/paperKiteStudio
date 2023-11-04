@@ -1,15 +1,13 @@
 import { useEffect } from "react";
 import ContactUs from "../ContactUs/ContactUs";
 import Slider from "../Slider/Slider";
-import AssociatedWith from "./AssociatedWith";
-// import { motion } from "framer-motion"
+import AssociatedWith from "./AssociatedWith/AssociatedWith";
 import "./Home.css"
-import { imageChildrens } from "./HomeData";
-import UpcommingProjects from "./UpcommingProjects";
-import WhatWeDo from "./WhatWeDo";
-import WhoWeAre from "./WhoWeAre";
+import { imageChildrens } from "../data/HomeData";
+import WhatWeDo from "./WhatWeDo/WhatWeDo";
+import WhoWeAre from "./WhoWeAre/WhoWeAre";
 import { useLocation } from "react-router-dom";
-import Start from "./Start";
+import Start from "./Start/Start";
 
 function Home() {
     const location = useLocation();
@@ -23,7 +21,6 @@ function Home() {
                 behavior: "smooth",
             });
         }
-        // console.log(x, location.hash, location.hash.substring(1))
     }, [location])
 
     return (<div className="home p-0 m-0" id="home">
@@ -32,7 +29,6 @@ function Home() {
         <WhatWeDo />
         <WhoWeAre />
         <AssociatedWith />
-        <UpcommingProjects />
         <ContactUs />
     </div>)
 }

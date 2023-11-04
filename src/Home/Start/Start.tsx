@@ -1,5 +1,5 @@
-import logoTest from "/logoText.png"
-import logo from "../images/LOGO.png"
+import logoTest from "../../images/logoText.png"
+import logo from "../../images/LOGO.png"
 
 const Start = () => {
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { whoWeAre } from "./HomeData";
+import { whoWeAre } from "../../data/HomeData";
 
 const WhoWeAre = () => {
     return (
