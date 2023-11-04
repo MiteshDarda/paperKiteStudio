@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { whoWeAre } from "../../data/HomeData";
+import whoWeAre from "../../data/whoWeAre";
 
 const WhoWeAre = () => {
     return (
@@ -13,9 +13,9 @@ const WhoWeAre = () => {
             <motion.h1 className="text-3xl mb-12">
                 Who We Are ?
             </motion.h1>
-            <motion.div className="flex justify-around flex-wrap">
+            <motion.div className="flex justify-around flex-wrap flex-grow">
                 {whoWeAre.map((data, k) =>
-                    <motion.div className="py-4" key={k}>
+                    <motion.div className="py-4 flex flex-col justify-center items-center w-[30%]" key={k}>
                         <motion.div className="overflow-visible py-2">
                             <motion.img
                                 initial={{ opacity: 0 }}
@@ -23,7 +23,8 @@ const WhoWeAre = () => {
                                 viewport={{ once: true }}
                                 alt="Card background"
                                 className="object-cover rounded-xl"
-                                src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                                // src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                                src={data.img}
                                 width={360}
                             />
                         </motion.div>

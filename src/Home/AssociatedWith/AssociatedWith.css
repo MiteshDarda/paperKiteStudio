@@ -21,7 +21,7 @@
 .logos-slide{
     white-space: nowrap;
     display: inline-block;
-    animation: 15s slide infinite linear;
+    animation: 30s slide infinite linear;
 }
 
 .logos::after, .logos::before{
@@ -35,15 +35,17 @@
 
 .logos::after{
     right: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0), rgba(265,265,265,0.5));
+    /* background: linear-gradient(to right, rgba(0,0,0,0), rgba(265,265,265,0.5)); */
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.5));
 }
 
 .logos::before{
     left: 0;
-    background: linear-gradient(to left, rgba(0,0,0,0), rgba(265, 265, 265, 0.5));
+    /* background: linear-gradient(to left, rgba(0,0,0,0), rgba(265, 265, 265, 0.5)); */
+    background: linear-gradient(to left, rgba(0,0,0,0), rgba(0, 0, 0, 0.5));
 }
 
 .logos-slide img{
     display: inline-block;
-    margin: 0 40px;
+    margin: 0 60px;
 }

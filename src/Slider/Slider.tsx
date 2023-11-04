@@ -29,7 +29,7 @@ const Slider = (props: { childs: ReactNode[], interval?: number, totalItems?: nu
     }
 
     return (
-        <motion.div ref={carousel} className=" w-screen carousel p-6 min-h-screen flex items-center scroll-smooth overflow-auto static grow">
+        <motion.div ref={carousel} className=" w-screen carousel p-6 h-[50vh] flex items-center scroll-smooth overflow-auto static grow">
             <CaretRightOutlined onClick={goNext} className="carousel-button absolute top-25 right-10 z-10" />
             <CaretLeftOutlined onClick={goPrev} className="carousel-button absolute top-25 left-10 z-10" />
             {
